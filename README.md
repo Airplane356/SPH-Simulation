@@ -49,7 +49,7 @@ where:
 - h is the smoothing length, controlling how far the influence extends (similar to standard deviation on the normal distribution). 
 The gradient (∇𝐺) of the kernel is:
 
-<img width="316" alt="Screenshot 2025-03-14 at 21 05 31" src="https://github.com/user-attachments/assets/c7b37406-865a-4ef4-9661-81bb094468d5" />
+<img width="320" alt="Screenshot 2025-03-14 at 21 06 58" src="https://github.com/user-attachments/assets/aa55ea2e-bd25-46ab-bc49-ac74758ad18d" />
 
 5️⃣ Density 
 
