@@ -45,8 +45,8 @@ We will use the Gaussian Kernel:
 <img width="260" alt="Screenshot 2025-03-14 at 21 05 02" src="https://github.com/user-attachments/assets/9dcbfd7f-64de-4059-b6d0-be2b1a6f8555" />
 
 where: 
-- d=x−y is the distance between two particles.
-- h is the smoothing length, controlling how far the influence extends (similar to standard deviation on the normal distribution). 
+- 𝒅=𝒙−𝒚 is the distance between two particles.
+- 𝒉 is the smoothing length, controlling how far the influence extends (similar to standard deviation on the normal distribution). 
 The gradient (∇𝐺) of the kernel is:
 
 <img width="320" alt="Screenshot 2025-03-14 at 21 06 58" src="https://github.com/user-attachments/assets/aa55ea2e-bd25-46ab-bc49-ac74758ad18d" />
@@ -70,7 +70,7 @@ where:
 - 𝜌rest is the initial rest density
 - 𝑘 is the "stiffness" constant
 
-Using the Symmetric Gradient Formula (since the gradient of the original pressure function is not a very good pressure force)
+Using the Symmetric Gradient Formula (since the gradient of the original pressure function is not a very good pressure force), we can compute the gradient of the pressures: 
 
 <img width="425" alt="Screenshot 2025-03-14 at 21 06 26" src="https://github.com/user-attachments/assets/e8f8076f-e81c-4ee2-96d5-dff9cc9fe3bb" />
 
