@@ -31,7 +31,7 @@ Fluids resist compression, so pressure forces push particles apart if they are t
 
 The pressure force is computed by using the gradient of the pressure: 
 
-![Force](https://github.com/user-attachments/assets/a16f3590-6bfa-43ec-ae58-64f8825ea516)
+<img width="123" alt="Screenshot 2025-03-14 at 21 03 32" src="https://github.com/user-attachments/assets/9838569a-81a2-46b6-bb98-7650724abfaa" />
 
 The pressure gradient (∇𝑝) tells us how quickly and in what direction pressure changes. Since fluids naturally move from high-pressure to low-pressure areas, we negate the pressure force to ensure that particles are pushed outward from regions of high pressure. 
 ​
