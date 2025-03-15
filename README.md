@@ -22,7 +22,7 @@ Fluids are continuous in reality, but for simulation, we break them down into di
 Each SPH particle represents a small volume of fluid and influences its surroundings through a smoothing kernel.
 
 2️⃣ Motion 
-Each particle moves accordingly to Newton's second law, F=ma. We updated the positions by integrating with dt. 
+Each particle moves accordingly to Newton's second law, F=ma. We update its velocity by integrating acceleration over 𝑑𝑡 and update its position by integrating velocity over 𝑑𝑡. 
 
 3️⃣ Forces
 The simulation uses two key forces: gravity and pressure forces. 
