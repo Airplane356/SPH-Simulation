@@ -34,30 +34,35 @@ The pressure force is computed by using the gradient of the pressure:
 <img width="123" alt="Screenshot 2025-03-14 at 21 03 32" src="https://github.com/user-attachments/assets/9838569a-81a2-46b6-bb98-7650724abfaa" />
 
 The pressure gradient (∇𝑝) tells us how quickly and in what direction pressure changes. Since fluids naturally move from high-pressure to low-pressure areas, we negate the pressure force to ensure that particles are pushed outward from regions of high pressure. 
-​
-![pressure gradient](https://github.com/user-attachments/assets/47d715c4-230b-4a5a-8940-952844a0ad9f)
+
+
+​<img width="420" alt="Screenshot 2025-03-14 at 21 04 23" src="https://github.com/user-attachments/assets/97dab5e0-f3ad-4d4e-a509-7a62b7068cf2" />
 
 4️⃣ SPH Kernel
 SPH particles interact through a kernel function that defines their influence range.
 We will use the Gaussian Kernel:
-![Gaussian kernel](https://github.com/user-attachments/assets/ff48c081-e432-4601-a181-dc1d9fc80cae)
+
+<img width="260" alt="Screenshot 2025-03-14 at 21 05 02" src="https://github.com/user-attachments/assets/9dcbfd7f-64de-4059-b6d0-be2b1a6f8555" />
 
 where: 
 - d=x−y is the distance between two particles.
 - h is the smoothing length, controlling how far the influence extends (similar to standard deviation on the normal distribution). 
 The gradient (∇𝐺) of the kernel is:
-![Gaussian gradient](https://github.com/user-attachments/assets/0bf03a2c-865d-47d7-8b14-91def75af7eb)
+
+<img width="316" alt="Screenshot 2025-03-14 at 21 05 31" src="https://github.com/user-attachments/assets/c7b37406-865a-4ef4-9661-81bb094468d5" />
 
 5️⃣ Density 
 
 Each particle has a local density, which is computed as:
-![density function](https://github.com/user-attachments/assets/ca20a2fe-1c17-4fcc-981a-c2b40ffdebd0)
+
+<img width="219" alt="Screenshot 2025-03-14 at 21 05 47" src="https://github.com/user-attachments/assets/3668edac-4001-41e6-9e69-924e5e7a974d" />
 
 where the sum runs over all neighboring particles. This means that each particle’s density is influenced by nearby particles.
 
 6️⃣ Pressure 
 The pressure at each particle is computed as:
-![pressure](https://github.com/user-attachments/assets/744a7c60-b54c-498e-8d22-ef84867e805f)
+
+<img width="209" alt="Screenshot 2025-03-14 at 21 06 08" src="https://github.com/user-attachments/assets/d5e56cec-bb36-4ab3-bc35-0222372a9a82" />
 
 where: 
 - 𝑝 is the pressure
@@ -66,7 +71,8 @@ where:
 - 𝑘 is the "stiffness" constant
 
 Using the Symmetric Gradient Formula (since the gradient of the original pressure function is not a very good pressure force)
-![pressure gradient](https://github.com/user-attachments/assets/94af0bd0-22ac-4bdd-92ab-eae7156b7cd8)
+
+<img width="425" alt="Screenshot 2025-03-14 at 21 06 26" src="https://github.com/user-attachments/assets/e8f8076f-e81c-4ee2-96d5-dff9cc9fe3bb" />
 
 7️⃣ Apply
 After computing the density, and pressure gradient, the force acting on each particle is calculated, resulting in acceleration from the pressure. 
